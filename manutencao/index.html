@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0e7490">
+<meta name="description" content="App de gestão de ativos de manutenção — cadastro de ativos, ordens de manutenção corretivas e preventivas, planos preventivos e indicadores (MTBF, MTTR, disponibilidade e custos).">
+<title>Gestão de Manutenção — Ativos, Ordens e Planos Preventivos</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="../icons/icon-192.png">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-icon">🔧</div>
+      <h1>Gestão de Manutenção
+        <small>Ativos • Ordens de serviço • Planos preventivos • Indicadores</small>
+      </h1>
+    </div>
+    <div class="header-actions">
+      <button id="btn-export" class="icon-btn" title="Exportar dados (JSON)">⬇️</button>
+      <button id="btn-import" class="icon-btn" title="Importar dados (JSON)">⬆️</button>
+      <button id="btn-reset" class="icon-btn" title="Restaurar dados de exemplo">♻️</button>
+      <button id="btn-theme" class="icon-btn" title="Tema claro/escuro">🌙</button>
+    </div>
+  </div>
+  <nav class="tabs" aria-label="Seções do app">
+    <button class="tab active" data-tab="dashboard">📊 Dashboard</button>
+    <button class="tab" data-tab="ativos">🏭 Ativos</button>
+    <button class="tab" data-tab="ordens">🧾 Ordens de Manutenção</button>
+    <button class="tab" data-tab="planos">📅 Planos Preventivos</button>
+  </nav>
+</header>
+
+<main>
+  <section id="tab-dashboard" class="page active" aria-label="Dashboard"></section>
+  <section id="tab-ativos" class="page" aria-label="Ativos"></section>
+  <section id="tab-ordens" class="page" aria-label="Ordens de manutenção"></section>
+  <section id="tab-planos" class="page" aria-label="Planos preventivos"></section>
+</main>
+
+<footer class="app-footer">
+  <p><strong>Gestão de Manutenção</strong> — cadastro de ativos, ordens corretivas e preventivas,
+  planos preventivos e indicadores de confiabilidade (MTBF, MTTR, disponibilidade e custos).</p>
+  <p>Dados salvos neste dispositivo (localStorage). Use ⬇️/⬆️ para exportar ou importar backup em JSON.</p>
+</footer>
+
+<div id="modal-backdrop" class="modal-backdrop" hidden>
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="modal-head">
+      <h2 id="modal-title"></h2>
+      <button id="modal-close" class="icon-btn" aria-label="Fechar">✕</button>
+    </div>
+    <form id="modal-form" class="modal-body"></form>
+  </div>
+</div>
+
+<div id="toast" class="toast" role="status"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
