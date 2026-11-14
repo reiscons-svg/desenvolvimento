@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#4f46e5">
+<meta name="description" content="App PWA educativo sobre Plano de Desenvolvimento Pessoal — baseado no vídeo de André Arcas e no método Lifebook. Resumo, pontos-chave, explicação, glossário, perguntas, trilha do conhecimento e mapa visual.">
+<title>Plano de Desenvolvimento Pessoal — Trilha do Conhecimento</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="header-inner">
+    <button id="btn-hamburger" class="icon-btn hamburger" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-panel">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="brand">
+      <div class="brand-icon">🌱</div>
+      <h1>Plano de Desenvolvimento Pessoal
+        <small>Trilha do conhecimento • método Lifebook</small>
+      </h1>
+    </div>
+    <div class="header-actions">
+      <button id="btn-font-down" class="icon-btn" aria-label="Diminuir tamanho da fonte" title="Diminuir letra">A−</button>
+      <button id="btn-font-up" class="icon-btn" aria-label="Aumentar tamanho da fonte" title="Aumentar letra"><span class="font-lab">A+</span></button>
+      <button id="btn-theme" class="icon-btn" aria-label="Alternar tema claro/escuro" title="Tema claro/escuro">🌙</button>
+    </div>
+  </div>
+
+  <nav id="menu-panel" class="menu-panel" aria-label="Menu principal">
+    <div class="menu-grid">
+      <span class="menu-section-label">Conteúdo do vídeo</span>
+      <a class="menu-link" href="#inicio" data-page="inicio"><span class="mi">🏠</span><span>Início<span class="md">Visão geral e vídeo original</span></span></a>
+      <a class="menu-link" href="#resumo" data-page="resumo"><span class="mi">📝</span><span>Resumo<span class="md">/summary — capítulo a capítulo</span></span></a>
+      <a class="menu-link" href="#pontos-chave" data-page="pontos-chave"><span class="mi">🔑</span><span>Pontos-Chave<span class="md">/keypoints — 12 ideias essenciais</span></span></a>
+      <a class="menu-link" href="#explicacao" data-page="explicacao"><span class="mi">💡</span><span>Explicação<span class="md">/explain — análise aprofundada</span></span></a>
+      <a class="menu-link" href="#glossario" data-page="glossario"><span class="mi">📖</span><span>Glossário<span class="md">/glossary — termos do método</span></span></a>
+      <a class="menu-link" href="#perguntas" data-page="perguntas"><span class="mi">❓</span><span>Perguntas<span class="md">/questions — dúvidas frequentes</span></span></a>
+      <span class="menu-section-label">Aprenda e aplique</span>
+      <a class="menu-link" href="#trilha" data-page="trilha"><span class="mi">🧭</span><span>Trilha do Conhecimento<span class="md">14 módulos com quizzes e progresso</span></span></a>
+      <a class="menu-link" href="mapa.html" target="_blank" rel="noopener"><span class="mi">🗺️</span><span>Mapa Visual do Livro<span class="md">Abre em nova aba — roda da vida</span></span></a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section id="page-inicio" class="page" aria-label="Início"></section>
+  <section id="page-resumo" class="page" aria-label="Resumo"></section>
+  <section id="page-pontos-chave" class="page" aria-label="Pontos-chave"></section>
+  <section id="page-explicacao" class="page" aria-label="Explicação"></section>
+  <section id="page-glossario" class="page" aria-label="Glossário"></section>
+  <section id="page-perguntas" class="page" aria-label="Perguntas"></section>
+  <section id="page-trilha" class="page" aria-label="Trilha do conhecimento"></section>
+</main>
+
+<footer class="app-footer">
+  <p><strong>Plano de Desenvolvimento Pessoal</strong> — app educativo baseado no vídeo
+  <a href="https://www.youtube.com/watch?v=vNR84SVVXgs" target="_blank" rel="noopener">«Plano de Desenvolvimento Pessoal: Como Criar o Seu»</a>
+  de <a href="https://www.youtube.com/@andre-arcas" target="_blank" rel="noopener">André Arcas</a> (método Lifebook / Mindvalley).</p>
+  <p>Progresso, tema e tamanho de fonte ficam salvos neste dispositivo (localStorage).</p>
+</footer>
+
+<div id="toast" class="toast" role="status"></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
