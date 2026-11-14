@@ -167,6 +167,7 @@ td .acoes { display: flex; gap: .35rem; white-space: nowrap; }
   background: rgba(10, 16, 20, .55);
   display: grid; place-items: center; padding: 1rem;
 }
+.modal-backdrop[hidden] { display: none; }
 .modal {
   background: var(--surface); border-radius: var(--radius);
   width: 100%; max-width: 560px; max-height: 92vh; overflow: auto;
